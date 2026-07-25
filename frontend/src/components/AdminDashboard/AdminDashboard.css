@@ -1,0 +1,167 @@
+.admin-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.admin-container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  margin: 6px 0 8px;
+  font-size: 36px;
+  color: #172033;
+}
+
+.admin-header p {
+  margin: 0;
+  color: #697386;
+}
+
+.admin-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #4f46e5 !important;
+}
+
+.user-count {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #e8e7ff;
+  color: #4338ca;
+  font-weight: 700;
+}
+
+.user-list {
+  display: grid;
+  gap: 16px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px;
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(20, 30, 55, 0.06);
+}
+
+.user-information {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-avatar {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ebe9fe;
+  color: #4f46e5;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.user-information h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #172033;
+}
+
+.user-information p {
+  margin: 0;
+  color: #7a8497;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.user-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.user-actions button:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.approve-button {
+  background: #16a34a;
+  color: white;
+}
+
+.reject-button {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.empty-state,
+.error-message,
+.admin-message {
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  background: white;
+}
+
+.empty-state h2 {
+  margin-top: 0;
+  color: #172033;
+}
+
+.empty-state p {
+  color: #697386;
+}
+
+.error-message {
+  margin-bottom: 20px;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+@media (max-width: 650px) {
+  .admin-header,
+  .user-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .user-actions {
+    width: 100%;
+  }
+
+  .user-actions button {
+    flex: 1;
+  }
+
+  .admin-header h1 {
+    font-size: 28px;
+  }
+}
